@@ -1,0 +1,53 @@
+{
+  "name": "freelens-fleet-dashboard",
+  "version": "0.5.0",
+  "description": "Unified multi-cluster fleet dashboard and cross-cluster drift inspector for FreeLens",
+  "main": "out/main/index.js",
+  "renderer": "out/renderer/index.js",
+  "files": [
+    "out/**/*",
+    "README.md",
+    "ARCHITECTURE.md",
+    "CONTEXT.md"
+  ],
+  "engines": {
+    "node": ">= 18.0.0",
+    "freelens": "^1.0.0"
+  },
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development --watch",
+    "compile": "tsc --noEmit",
+    "pack": "npm run build && npm pack"
+  },
+  "keywords": [
+    "freelens",
+    "openlens",
+    "lens",
+    "extension",
+    "kubernetes",
+    "multicluster",
+    "dashboard",
+    "devops"
+  ],
+  "author": "Bastian Alveal Lampe",
+  "license": "MIT",
+  "dependencies": {
+    "@kubernetes/client-node": "^1.1.0"
+  },
+  "devDependencies": {
+    "@freelensapp/extensions": "^1.10.2",
+    "@types/node": "^20.11.0",
+    "@types/react": "^17.0.74",
+    "@types/react-dom": "^17.0.25",
+    "css-loader": "^6.10.0",
+    "mini-css-extract-plugin": "^2.8.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "style-loader": "^3.3.4",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.3.3",
+    "webpack": "^5.90.1",
+    "webpack-cli": "^5.1.4"
+  }
+}
